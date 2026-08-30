@@ -1,0 +1,14 @@
+.DS_Store
+*.swp
+*.swo
+*.bak
+
+# Backups generados por install.sh
+backups/
+
+# Config local por máquina (nunca se versiona)
+home/.zshrc.local
+*.local.zsh
+
+# El folder ai/ es un symlink a ~/dev/ai (guidobuilds/ai)
+/ai

@@ -1,0 +1,67 @@
+# Starship prompt — Guido's dotfiles
+
+add_newline = true
+
+format = """
+$username\
+$directory\
+$git_branch\
+$git_status\
+$package\
+$python\
+$rust\
+$golang\
+$nodejs\
+$cmd_duration\
+$line_break\
+$character"""
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
+[username]
+show_always = false
+style_user = "bold cyan"
+format = "[$user]($style) "
+
+[directory]
+style = "bold blue"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = ""
+style = "bold purple"
+
+[git_status]
+style = "bold green"
+
+[nodejs]
+symbol = ""
+format = "[$symbol($version)]($style) "
+style = "bold green"
+
+[python]
+symbol = ""
+format = "[$symbol($version)]($style) "
+style = "bold yellow"
+
+[rust]
+symbol = ""
+format = "[$symbol($version)]($style) "
+style = "bold red"
+
+[golang]
+symbol = ""
+format = "[$symbol($version)]($style) "
+style = "bold cyan"
+
+[package]
+format = "[$symbol$version]($style) "
+style = "bold yellow"
+
+[cmd_duration]
+min_time = 2000
+format = "[$duration]($style) "
+style = "yellow"

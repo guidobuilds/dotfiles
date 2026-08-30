@@ -1,0 +1,21 @@
+[user]
+	name = Guido Caffa
+	email = caffaguido@gmail.com
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+
+[color]
+	ui = auto
+
+[core]
+	editor = nvim
+
+[rerere]
+	enabled = true

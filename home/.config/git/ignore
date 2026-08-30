@@ -1,0 +1,5 @@
+# Exclusión global de Git (~/.config/git/ignore se aplica automáticamente)
+**/.claude/settings.local.json
+.DS_Store
+*.swp
+*.swo
