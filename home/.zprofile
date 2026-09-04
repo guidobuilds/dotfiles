@@ -28,5 +28,4 @@ export PATH="$HOME/.grok/bin:$PATH"
 # ─── Antigravity ─────────────────────────────────────────────
 export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 
-# ─── Docunaut ────────────────────────────────────────────────
-export PATH="$HOME/.docunaut:$PATH"
+
