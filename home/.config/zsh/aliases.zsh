@@ -3,7 +3,6 @@
 # Dotfiles
 alias dotfiles='cd ~/.dotfiles'
 alias zreload='source ~/.zshrc'
-alias ai='cd ~/dev/ai'
 
 # Git
 alias g='git'

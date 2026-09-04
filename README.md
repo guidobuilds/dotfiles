@@ -18,7 +18,7 @@ El script:
 2. Instala todos los paquetes y apps del `Brewfile`
 3. Enlaza los dotfiles de `home/` a `~/` (con backup automático en `~/.dotfiles-backup/`)
 4. Instala Oh My Zsh (si falta)
-5. Sincroniza tu repo de IA `guidobuilds/ai` (skills y agents a Claude, Codex, OpenCode y Gemini)
+5. Instala los skills de `guidobuilds/skills` con skills.sh (global, todos los agentes y Claude Code)
 6. Aplica macOS defaults (Dock, Finder, trackpad)
 
 ## Después de install.sh
@@ -41,9 +41,8 @@ dotfiles/
 │   ├── 01-brew.sh            # Xcode CLT + Homebrew + Brewfile
 │   ├── 02-symlinks.sh        # Enlaza home/ → ~/ con backups
 │   ├── 03-zsh.sh             # Oh My Zsh
-│   ├── 04-ai.sh              # Sincroniza guidobuilds/ai → agentes
+│   ├── 04-skills.sh          # Instala skills de guidobuilds/skills (skills.sh)
 │   └── 05-macos.sh           # macOS defaults
-├── ai/                       # Symlink → ~/dev/ai (repo guidobuilds/ai)
 └── home/                     # Dotfiles (espejo de ~/)
     ├── .zshrc                # Oh My Zsh + Starship + nvm
     ├── .zshenv               # Cargo (Rust)
@@ -62,16 +61,13 @@ dotfiles/
 Ahí van cosas como `CONTEXT7_API_KEY` o aliases de trabajo locales.
 El instalador migra automáticamente los secretos que detecte en tu `.zshrc` antiguo.
 
-## IA
+## Skills
 
-La fuente única de verdad de tu IA vive en [`guidobuilds/ai`](https://github.com/guidobuilds/ai),
-enlazado como `~/.dotfiles/ai`. El script `04-ai.sh`:
+La fuente única de verdad de tus skills vive en [`guidobuilds/skills`](https://github.com/guidobuilds/skills).
+El script `04-skills.sh` los instala con [skills.sh](https://skills.sh) (`npx skills`), de forma global
+(usuario), en todos los agentes y en Claude Code.
 
-1. Clona/actualiza `guidobuilds/ai` en `~/dev/ai`
-2. Enlaza `ai/skills/*` a los skills de Claude, OpenCode y agents
-3. Enlaza `ai/agents/*` a Claude, Codex y Gemini
-
-Editas solo en `~/dev/ai` y corres `bash ~/.dotfiles/scripts/04-ai.sh` para distribuir.
+Editas los skills en el repo y corres `bash ~/.dotfiles/scripts/04-skills.sh` para instalarlos o actualizarlos.
 
 ## Mantener el Brewfile al día
 
