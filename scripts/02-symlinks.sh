@@ -22,7 +22,6 @@ link_file() {
 mkdir -p "$HOME/.config/git" "$HOME/.config/ghostty" "$HOME/.config/zsh"
 
 link_file "$DOTFILES/home/.zshrc"                  "$HOME/.zshrc"
-link_file "$DOTFILES/home/.zshenv"                 "$HOME/.zshenv"
 link_file "$DOTFILES/home/.zprofile"               "$HOME/.zprofile"
 link_file "$DOTFILES/home/.gitconfig"              "$HOME/.gitconfig"
 link_file "$DOTFILES/home/.config/git/ignore"      "$HOME/.config/git/ignore"

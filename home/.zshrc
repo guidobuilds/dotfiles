@@ -7,9 +7,6 @@ ZSH_THEME=""
 # Plugins de OMZ (los de autosuggestions/highlighting van via brew abajo)
 plugins=(git)
 
-# Completions de Grok CLI (deben ir antes del compinit de OMZ)
-fpath=(~/.grok/completions/zsh $fpath)
-
 source $ZSH/oh-my-zsh.sh
 
 # ─── zsh-autosuggestions + zsh-syntax-highlighting (Homebrew) ─

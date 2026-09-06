@@ -18,7 +18,7 @@ El script:
 2. Instala todos los paquetes y apps del `Brewfile`
 3. Enlaza los dotfiles de `home/` a `~/` (con backup automático en `~/.dotfiles-backup/`)
 4. Instala Oh My Zsh (si falta)
-5. Instala los skills de `guidobuilds/skills` con skills.sh (global, todos los agentes y Claude Code)
+5. Instala los skills de `guidobuilds/skills` con skills.sh (interactivo: pregunta por cada skill; global, todos los agentes y Claude Code)
 6. Aplica macOS defaults (Dock, Finder, trackpad)
 
 ## Después de install.sh
@@ -26,7 +26,7 @@ El script:
 Estos pasos requieren interacción humana:
 
 - `gh auth login`
-- Generar clave SSH: `ssh-keygen -t ed25519 -C "caffaguido@gmail.com"` y añadirla a GitHub
+- Generar clave SSH: `ssh-keygen -t ed25519 -C "TU_EMAIL@users.noreply.github.com"` y añadirla a GitHub
 - Revisar `~/.zshrc.local` para tus secretos por máquina (ej. `CONTEXT7_API_KEY`)
 - Abrir una terminal nueva
 
@@ -45,8 +45,7 @@ dotfiles/
 │   └── 05-macos.sh           # macOS defaults
 └── home/                     # Dotfiles (espejo de ~/)
     ├── .zshrc                # Oh My Zsh + Starship + nvm
-    ├── .zshenv               # Cargo (Rust)
-    ├── .zprofile             # PATHs (brew, python, bun, pnpm, grok...)
+    ├── .zprofile             # PATHs (brew, python, bun, pnpm, node...)
     ├── .gitconfig
     └── .config/
         ├── git/ignore        # Exclusiones globales de Git

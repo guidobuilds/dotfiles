@@ -1,6 +1,8 @@
+# Reemplaza TU_EMAIL con tu email noreply de GitHub antes de publicar.
+# En GitHub → Settings → Emails → "Keep my email addresses private".
 [user]
-	name = Guido Caffa
-	email = caffaguido@gmail.com
+	name = Guido
+	email = TU_EMAIL@users.noreply.github.com
 
 [init]
 	defaultBranch = main

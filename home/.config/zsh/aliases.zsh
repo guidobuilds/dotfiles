@@ -38,13 +38,6 @@ alias brewup='brew update && brew upgrade && brew cleanup'
 alias brewout='brew outdated'
 alias brewls='brew leaves'
 
-# Rust / Cargo
-alias cg='cargo'
-alias cgb='cargo build'
-alias cgr='cargo run'
-alias cgf='cargo fmt'
-alias cgc='cargo clippy'
-
 # Python
 alias py='python3'
 alias venv='python3 -m venv .venv && source .venv/bin/activate'

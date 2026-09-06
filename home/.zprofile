@@ -22,9 +22,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME/bin:$PATH" ;;
 esac
 
-# ─── Grok CLI ────────────────────────────────────────────────
-export PATH="$HOME/.grok/bin:$PATH"
-
 # ─── Antigravity ─────────────────────────────────────────────
 export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 
