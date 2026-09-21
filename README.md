@@ -18,8 +18,9 @@ El script:
 2. Instala todos los paquetes y apps del `Brewfile`
 3. Enlaza los dotfiles de `home/` a `~/` (con backup automático en `~/.dotfiles-backup/`)
 4. Instala Oh My Zsh (si falta)
-5. Instala los skills de `guidobuilds/skills` con skills.sh (interactivo: pregunta por cada skill; global, todos los agentes y Claude Code)
-6. Aplica macOS defaults (Dock, Finder, trackpad)
+5. Instala CodeGraph y registra su servidor MCP en los agentes detectados
+6. Instala los skills de `guidobuilds/skills` con skills.sh (interactivo: pregunta por cada skill; global, todos los agentes y Claude Code)
+7. Aplica macOS defaults (Dock, Finder, trackpad)
 
 ## Después de install.sh
 
@@ -28,6 +29,7 @@ Estos pasos requieren interacción humana:
 - `gh auth login`
 - Generar clave SSH: `ssh-keygen -t ed25519 -C "TU_EMAIL@users.noreply.github.com"` y añadirla a GitHub
 - Revisar `~/.zshrc.local` para tus secretos por máquina (ej. `CONTEXT7_API_KEY`)
+- Ejecutar `codegraph init` una vez en cada proyecto que quieras indexar
 - Abrir una terminal nueva
 
 ## Estructura
@@ -41,6 +43,7 @@ dotfiles/
 │   ├── 01-brew.sh            # Xcode CLT + Homebrew + Brewfile
 │   ├── 02-symlinks.sh        # Enlaza home/ → ~/ con backups
 │   ├── 03-zsh.sh             # Oh My Zsh
+│   ├── 04-codegraph.sh        # CodeGraph + integración MCP con agentes
 │   ├── 04-skills.sh          # Instala skills de guidobuilds/skills (skills.sh)
 │   └── 05-macos.sh           # macOS defaults
 └── home/                     # Dotfiles (espejo de ~/)
@@ -67,6 +70,18 @@ El script `04-skills.sh` los instala con [skills.sh](https://skills.sh) (`npx sk
 (usuario), en todos los agentes y en Claude Code.
 
 Editas los skills en el repo y corres `bash ~/.dotfiles/scripts/04-skills.sh` para instalarlos o actualizarlos.
+
+## CodeGraph
+
+[CodeGraph](https://github.com/colbymchenry/codegraph) se instala en `~/.local/bin` y se configura globalmente
+para los agentes compatibles detectados, incluido OpenCode. Para habilitarlo en un proyecto:
+
+```bash
+cd /ruta/al/proyecto
+codegraph init
+```
+
+El índice queda dentro de `.codegraph/`, se actualiza automáticamente y no se comparte en Git.
 
 ## Mantener el Brewfile al día
 
