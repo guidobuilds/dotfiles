@@ -27,11 +27,6 @@ alias ghclone='gh repo clone'
 
 # Package managers (pnpm es el gestor por defecto)
 alias npm='pnpm'
-alias p='pnpm'
-alias pi='pnpm install'
-alias pd='pnpm dev'
-alias pb='pnpm build'
-alias pt='pnpm test'
 
 # Homebrew
 alias brewup='brew update && brew upgrade && brew cleanup'
